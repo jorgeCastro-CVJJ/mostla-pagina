@@ -1,0 +1,52 @@
+[
+    {
+        "icon": "mdi:tailwind",
+        "title": "Inteligencia Artificial",
+        "description": "Usa la IA como parte de tu formación integral y profesional para lograr lo épico en campus Querétaro."
+    },
+    {
+        "icon": "mdi:wheelchair-accessibility",
+        "title": "a11y Components",
+        "description": "17 components and counting, all tried and tested for the most optimal accessible experience for your visitors."
+    },
+    {
+        "icon":"mdi:looks",
+        "title": "Prettier",
+        "description": "Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting. "
+    },
+    {
+        "icon": "mdi:eslint",
+        "title": "ESlint",
+        "description": "Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards."
+    },
+    {
+        "icon": "mdi:book-open-page-variant",
+        "title": "Blog",
+        "description": "This theme comes with a fully integrated blog, dynamic pages and SEO optimization."
+    },
+    {
+        "icon": "mdi:language-markdown",
+        "title": "Markdown & MDX",
+        "description": "Easily use .md and .mdx pages to build your websites or use it with Netlify CMS."
+    },
+    {
+        "icon": "mdi:theme-light-dark",
+        "title": "Dark Mode",
+        "description": "Fully integrated Dark mode gives your users the choice for their favorite viewing mode."
+    },
+    {
+        "icon": "mdi:cog",
+        "title": "Design System",
+        "description": "The theme offers some very handy utilities to help you build your website faster."
+    },
+    {
+        "icon": "mdi:lighthouse",
+        "title": "Lighthouse Scores",
+        "description": "Excellent lighthouse scores means your website will load faster and get better SEO rankings."
+    },
+    {
+        "icon": "mdi:car",
+        "title": "BMW",
+        "description": "BMW is an overrated brand. No guts"
+    }
+]
