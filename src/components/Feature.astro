@@ -64,12 +64,18 @@ const { icon = 'mdi:rocket', title = 'Title' } = Astro.props
     }
   }
   .feature:hover{
-    
-    transform: translateY(-0.5rem);
-
-    &::before {
-      background-color: var(--neutral-700)
+  
+    scale: 1.05;
+    transition: scale 0.2s;
+    [data-icon] {
+      color: var(--dark-100);
     }
+    color: var(--neutral-100);
+    &::before {
+      background-color: var(--primary-100);
+      border:  3px solid var(--action-color);
+    };
+    
   }
 
   :global(.feature [data-icon]) {
@@ -81,5 +87,15 @@ const { icon = 'mdi:rocket', title = 'Title' } = Astro.props
   :global(.darkmode .feature::before) {
     background-color: var(--dark-100);
     box-shadow: 0 0 0 6px var(--dark-100);
+  }
+
+  :global(.darkmode .feature:hover::before) {
+    background-color: var(--neutral-700);
+  }
+  :global(.darkmode .feature:hover) {
+    [data-icon] {
+      color: var(--action-color);
+    }
+    
   }
 </style>
