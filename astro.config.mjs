@@ -7,7 +7,9 @@ import icon from "astro-icon"
 // https://astro.build/config
 export default defineConfig({
   compressHTML: true,
-  integrations: [mdx(), icon(), tailwind({
+  integrations: [mdx(), icon({
+    iconDir: "src/assets/icons",
+  }), tailwind({
     applyBaseStyles: false,
   }), compress()],
 })

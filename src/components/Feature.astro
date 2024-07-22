@@ -6,7 +6,7 @@ const { icon = 'mdi:rocket', title = 'Title' } = Astro.props
 ---
 
 
-    <h2 class="mb-16 text-6xl">Features</h2>
+    <h2 class="mb-16 text-6xl">Nuestas Tecnologías</h2>
     <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
       
         {
@@ -61,6 +61,14 @@ const { icon = 'mdi:rocket', title = 'Title' } = Astro.props
       inset: 1rem -0.85rem -0.85rem 1rem;
       border-radius: 1rem;
       z-index: 0;
+    }
+  }
+  .feature:hover{
+    
+    transform: translateY(-0.5rem);
+
+    &::before {
+      background-color: var(--neutral-700)
     }
   }
 

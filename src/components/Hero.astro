@@ -11,7 +11,8 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
         <h1 class="text-center text-6xl md:text-left lg:text-8xl">
           <slot><span class="text-gradient">Mostla</span> Innovación a tu alcance</slot>
         </h1>
-        <div class="flex flex-col gap-3 min-[500px]:flex-row">
+        <img class=" md:hidden lg:hidden" src={src} alt="" decoding="async" />
+        <div class="flex flex-col gap-3 min-[300px]:flex-row">
           <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
             <Icon name="ion:star-outline" />
             Star on GitHub
@@ -25,7 +26,7 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
           </a>
         </div>
       </div>
-      <img class="hidden lg:block" src={src} alt="" decoding="async" />
+      <img class="hidden md:block lg:block" src={src} alt="" decoding="async" />
     </div>
   </div>
 </section>
