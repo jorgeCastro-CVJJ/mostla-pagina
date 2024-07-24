@@ -1,15 +1,34 @@
 ---
 import DefaultLayout from '../../layouts/DefaultLayout.astro'
 import { Card, Pagination } from 'accessible-astro-components'
+import { AstroIntegrationLogger } from 'astro'
+import { responseHasCookies } from 'astro/dist/core/cookies'
+import { getCollection } from 'astro:content'
+import { prefetch } from 'astro:prefetch'
+import { slugify } from '../../js/utils'
+
+
+
+
+
 
 export async function getStaticPaths({ paginate }) {
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts')
-  const data = await response.json()
+  //const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+  const allPosts = await Astro.glob('./*.md')
+  
+  const data = await allPosts
+  //const data = await response.json();
+
 
   return paginate(data, { pageSize: 6 })
 }
 
+
+
+
 const { page } = Astro.props
+
+console.log(page.data)
 ---
 
 <DefaultLayout
@@ -34,11 +53,11 @@ const { page } = Astro.props
           page.data.map((post) => (
             <li>
               <Card
-                url={'/blog/' + post.title.replaceAll(' ', '-').toLowerCase()}
-                title={post.title}
-                footer={'userId:' + post.userId}
+                url={'/blog/'+ slugify(post.url)}
+                title={post.frontmatter.title}
+                footer={'by ' + post.frontmatter.author}
               >
-                {post.body}
+                {post.frontmatter.overview}
               </Card>
             </li>
           ))
